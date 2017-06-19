@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79D1F66E-6452-4FA4-B0C9-468E09AEC234}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GAUC</RootNamespace>
+    <AssemblyName>GAUC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.7.1213\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="LINQtoCSV">
+      <HintPath>..\packages\LINQtoCSV.1.2.0.0\lib\LINQtoCSV.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\packages\WindowsAzure.Storage.2.1.0.4\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="activation.aspx" />
+    <Content Include="admin\Assignemnt.aspx" />
+    <Content Include="admin\backupinstructor.aspx" />
+    <Content Include="admin\courseapproval.aspx" />
+    <Content Include="admin\createinstructor.aspx" />
+    <Content Include="admin\editpersonal.aspx" />
+    <Content Include="admin\index.aspx" />
+    <Content Include="admin\instructors.aspx" />
+    <Content Include="admin\Superadmin users control .aspx" />
+    <Content Include="admin\UserHome.aspx" />
+    <Content Include="css\custom-theme\images\animated-overlay.gif" />
+    <Content Include="css\custom-theme\images\lst_bg.png" />
+    <Content Include="css\custom-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\custom-theme\images\ui-bg_flat_100_3b5998_40x100.png" />
+    <Content Include="css\custom-theme\images\ui-bg_flat_100_edf0f5_40x100.png" />
+    <Content Include="css\custom-theme\images\ui-bg_flat_55_5c9ccc_40x100.png" />
+    <Content Include="css\custom-theme\images\ui-bg_flat_55_fbee98_40x100.png" />
+    <Content Include="css\custom-theme\images\ui-bg_flat_55_fcee92_40x100.png" />
+    <Content Include="css\custom-theme\images\ui-bg_flat_85_5f89e3_40x100.png" />
+    <Content Include="css\custom-theme\images\ui-bg_glass_75_6eb9f2_1x400.png" />
+    <Content Include="css\custom-theme\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="css\custom-theme\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\custom-theme\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="css\custom-theme\images\ui-bg_highlight-hard_85_a1d3fc_1x100.png" />
+    <Content Include="css\custom-theme\images\ui-bg_loop_100_e6efef_21x21.png" />
+    <Content Include="css\custom-theme\images\ui-bg_spotlight_100_0764ab_16x16.png" />
+    <Content Include="css\custom-theme\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="css\custom-theme\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\custom-theme\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="css\custom-theme\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="css\custom-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\custom-theme\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="css\custom-theme\images\ui-icons_f6f5f4_256x240.png" />
+    <Content Include="css\custom-theme\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\custom-theme\jquery-ui-1.10.1.custom.css" />
+    <Content Include="css\custom-theme\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="css\kube.css" />
+    <Content Include="css\kube.min.css" />
+    <Content Include="css\master.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="forget.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="img\del.png" />
+    <Content Include="img\delete.ico" />
+    <Content Include="img\delete.png" />
+    <Content Include="img\delete_small.png" />
+    <Content Include="img\selected32.png" />
+    <Content Include="img\stop.ico" />
+    <Content Include="instructor\assignmentmanage.aspx" />
+    <Content Include="instructor\documents.aspx" />
+    <Content Include="instructor\inactive.aspx" />
+    <Content Include="instructor\videos\Desert.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="newpassword.aspx" />
+    <Content Include="Registration.aspx" />
+    <Content Include="student\assignmentupload.aspx" />
+    <Content Include="instructor\courserequest.aspx" />
+    <Content Include="instructor\createhomework.aspx" />
+    <Content Include="instructor\index.aspx" />
+    <Content Include="instructor\InsertUpload.aspx" />
+    <Content Include="instructor\ManageUpload.aspx" />
+    <Content Include="js\jquery-1.9.1.js" />
+    <Content Include="js\jquery-ui-1.10.1.custom.js" />
+    <Content Include="js\kube.buttons.js" />
+    <Content Include="js\kube.tabs.js" />
+    <Content Include="SendEmail.aspx" />
+    <Content Include="student\courseenroll.aspx" />
+    <Content Include="student\coursepage.aspx" />
+    <Content Include="student\index.aspx" />
+    <Content Include="student\requestpending.aspx" />
+    <Content Include="student\videoplayer.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="activation.aspx.cs">
+      <DependentUpon>activation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="activation.aspx.designer.cs">
+      <DependentUpon>activation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Assignemnt.aspx.cs">
+      <DependentUpon>Assignemnt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Assignemnt.aspx.designer.cs">
+      <DependentUpon>Assignemnt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\backupinstructor.aspx.cs">
+      <DependentUpon>backupinstructor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\backupinstructor.aspx.designer.cs">
+      <DependentUpon>backupinstructor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\courseapproval.aspx.cs">
+      <DependentUpon>courseapproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\courseapproval.aspx.designer.cs">
+      <DependentUpon>courseapproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Superadmin users control .aspx.cs">
+      <DependentUpon>Superadmin users control .aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Superadmin users control .aspx.designer.cs">
+      <DependentUpon>Superadmin users control .aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\UserHome.aspx.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\UserHome.aspx.designer.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="db_classes\SendEmail.cs" />
+    <Compile Include="db_layer\dbgau.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbgau.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forget.aspx.cs">
+      <DependentUpon>forget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forget.aspx.designer.cs">
+      <DependentUpon>forget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="instructor\assignmentmanage.aspx.cs">
+      <DependentUpon>assignmentmanage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="instructor\assignmentmanage.aspx.designer.cs">
+      <DependentUpon>assignmentmanage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="instructor\documents.aspx.cs">
+      <DependentUpon>documents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="instructor\documents.aspx.designer.cs">
+      <DependentUpon>documents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="instructor\inactive.aspx.cs">
+      <DependentUpon>inactive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="instructor\inactive.aspx.designer.cs">
+      <DependentUpon>inactive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newpassword.aspx.cs">
+      <DependentUpon>newpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newpassword.aspx.designer.cs">
+      <DependentUpon>newpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendEmail.cs" />
+    <Compile Include="student\assignmentupload.aspx.cs">
+      <DependentUpon>assignmentupload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\assignmentupload.aspx.designer.cs">
+      <DependentUpon>assignmentupload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="instructor\createhomework.aspx.cs">
+      <DependentUpon>createhomework.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="instructor\createhomework.aspx.designer.cs">
+      <DependentUpon>createhomework.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="instructor\InsertUpload.aspx.cs">
+      <DependentUpon>InsertUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="instructor\InsertUpload.aspx.designer.cs">
+      <DependentUpon>InsertUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="instructor\ManageUpload.aspx.cs">
+      <DependentUpon>ManageUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="instructor\ManageUpload.aspx.designer.cs">
+      <DependentUpon>ManageUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="master\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\createinstructor.aspx.cs">
+      <DependentUpon>createinstructor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\createinstructor.aspx.designer.cs">
+      <DependentUpon>createinstructor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\editpersonal.aspx.cs">
+      <DependentUpon>editpersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\editpersonal.aspx.designer.cs">
+      <DependentUpon>editpersonal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="db_classes\funcs.cs" />
+    <Compile Include="admin\instructors.aspx.cs">
+      <DependentUpon>instructors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\instructors.aspx.designer.cs">
+      <DependentUpon>instructors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="master\NoScripts.Master.cs">
+      <DependentUpon>NoScripts.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\NoScripts.Master.designer.cs">
+      <DependentUpon>NoScripts.Master</DependentUpon>
+    </Compile>
+    <Compile Include="master\One.Master.cs">
+      <DependentUpon>One.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\One.Master.designer.cs">
+      <DependentUpon>One.Master</DependentUpon>
+    </Compile>
+    <Compile Include="instructor\courserequest.aspx.cs">
+      <DependentUpon>courserequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="instructor\courserequest.aspx.designer.cs">
+      <DependentUpon>courserequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="instructor\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="instructor\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="master\student.Master.cs">
+      <DependentUpon>student.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\student.Master.designer.cs">
+      <DependentUpon>student.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SendEmail.aspx.cs">
+      <DependentUpon>SendEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendEmail.aspx.designer.cs">
+      <DependentUpon>SendEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student\courseenroll.aspx.cs">
+      <DependentUpon>courseenroll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\courseenroll.aspx.designer.cs">
+      <DependentUpon>courseenroll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student\coursepage.aspx.cs">
+      <DependentUpon>coursepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\coursepage.aspx.designer.cs">
+      <DependentUpon>coursepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student\requestpending.aspx.cs">
+      <DependentUpon>requestpending.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\requestpending.aspx.designer.cs">
+      <DependentUpon>requestpending.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student\videoplayer.aspx.cs">
+      <DependentUpon>videoplayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\videoplayer.aspx.designer.cs">
+      <DependentUpon>videoplayer.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="master\AdminMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="db_layer\dbgau.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbgau.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="master\One.Master" />
+    <Content Include="packages.config" />
+    <Content Include="master\NoScripts.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="master\student.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="backups\" />
+    <Folder Include="files\videos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="db_layer\dbgau.dbml.layout">
+      <DependentUpon>dbgau.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1052</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

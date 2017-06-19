@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbgau" Class="dbgauDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=WIN-HR1LMBESRET;Initial Catalog=dbgau;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dbgauConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.answer" Member="answers">
+    <Type Name="answer">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="questionid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="detail" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="question_answer" Member="question" ThisKey="questionid" OtherKey="id" Type="question" IsForeignKey="true" />
+      <Association Name="user_answer" Member="user" ThisKey="user_id" OtherKey="id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.assignment" Member="assignments">
+    <Type Name="assignment">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="contentType" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="user_assignment" Member="user" ThisKey="user_id" OtherKey="id" Type="user" IsForeignKey="true" />
+      <Association Name="course_assignment" Member="course" ThisKey="course_id" OtherKey="id" Type="course" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.department" Member="departments">
+    <Type Name="department">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="faculty" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="department_user" Member="users" ThisKey="id" OtherKey="department_id" Type="user" />
+      <Association Name="department_lecturer" Member="lecturers" ThisKey="id" OtherKey="department_id" Type="lecturer" />
+      <Association Name="department_course" Member="courses" ThisKey="id" OtherKey="department_id" Type="course" />
+    </Type>
+  </Table>
+  <Table Name="dbo.question" Member="questions">
+    <Type Name="question">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="questions" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="detail" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="viewing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="answers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="question_answer" Member="answers1" ThisKey="id" OtherKey="questionid" Type="answer" />
+      <Association Name="user_question" Member="user" ThisKey="user_id" OtherKey="id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.quota" Member="quotas">
+    <Type Name="quota">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="assign" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="used" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="remain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="quota_lecturer" Member="lecturers" ThisKey="id" OtherKey="quotaid" Type="lecturer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.upload" Member="uploads">
+    <Type Name="upload">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="contentType" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="data" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="course_upload" Member="course" ThisKey="course_id" OtherKey="id" Type="course" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.users" Member="users">
+    <Type Name="user">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_surname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="department_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="country" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="question" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="answer" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="user_answer" Member="answers" ThisKey="id" OtherKey="user_id" Type="answer" />
+      <Association Name="user_assignment" Member="assignments" ThisKey="id" OtherKey="user_id" Type="assignment" />
+      <Association Name="user_question" Member="questions" ThisKey="id" OtherKey="user_id" Type="question" />
+      <Association Name="user_enroll" Member="enrolls" ThisKey="id" OtherKey="user_id" Type="enroll" />
+      <Association Name="department_user" Member="department" ThisKey="department_id" OtherKey="id" Type="department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.videos" Member="videos">
+    <Type Name="video">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentName" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="submit_date" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="size" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="path" Type="System.String" DbType="NChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="views" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="course_video" Member="course" ThisKey="course_id" OtherKey="id" Type="course" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.courselecturer" Member="courselecturers">
+    <Type Name="courselecturer">
+      <Column Name="lecturer_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="lecturer_courselecturer" Member="lecturer" ThisKey="lecturer_id" OtherKey="id" Type="lecturer" IsForeignKey="true" />
+      <Association Name="course_courselecturer" Member="course" ThisKey="course_id" OtherKey="id" Type="course" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lecturer" Member="lecturers">
+    <Type Name="lecturer">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_surname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="department_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="country" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="quotaid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="lecturer_courselecturer" Member="courselecturers" ThisKey="id" OtherKey="lecturer_id" Type="courselecturer" />
+      <Association Name="department_lecturer" Member="department" ThisKey="department_id" OtherKey="id" Type="department" IsForeignKey="true" />
+      <Association Name="quota_lecturer" Member="quota" ThisKey="quotaid" OtherKey="id" Type="quota" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.homework" Member="homeworks">
+    <Type Name="homework">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="startdate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="duedate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="course_homework" Member="course" ThisKey="course_id" OtherKey="id" Type="course" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.course" Member="courses">
+    <Type Name="course">
+      <Column Name="id" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="department_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="enroll_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="enroll_owner" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="course_assignment" Member="assignments" ThisKey="id" OtherKey="course_id" Type="assignment" />
+      <Association Name="course_upload" Member="uploads" ThisKey="id" OtherKey="course_id" Type="upload" />
+      <Association Name="course_video" Member="videos" ThisKey="id" OtherKey="course_id" Type="video" />
+      <Association Name="course_courselecturer" Member="courselecturers" ThisKey="id" OtherKey="course_id" Type="courselecturer" />
+      <Association Name="course_homework" Member="homeworks" ThisKey="id" OtherKey="course_id" Type="homework" />
+      <Association Name="course_enroll" Member="enrolls" ThisKey="id" OtherKey="course_id" Type="enroll" />
+      <Association Name="department_course" Member="department" ThisKey="department_id" OtherKey="id" Type="department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enroll" Member="enrolls">
+    <Type Name="enroll">
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="course_enroll" Member="course" ThisKey="course_id" OtherKey="id" Type="course" IsForeignKey="true" />
+      <Association Name="user_enroll" Member="user" ThisKey="user_id" OtherKey="id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

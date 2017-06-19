@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 23.125, 25.5" name="dbgau">
+  <DataContextMoniker Name="/dbgauDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d8709807-8f66-4c3a-a17a-e45463a096c2" absoluteBounds="19.625, 22, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/dbgauDataContext/answer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="639272ba-566c-49bb-a36a-111c128544d9" absoluteBounds="19.64, 22.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="123735cb-ec38-4721-a161-872cc6116820" absoluteBounds="19.875, 16, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbgauDataContext/assignment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8df3bd91-49b5-40b7-94c0-83f5db973cee" absoluteBounds="19.89, 16.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5534f75c-0cc0-41a5-9faf-bfc738e266ed" absoluteBounds="11.375, 11.625, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/dbgauDataContext/department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16a51324-2444-49a5-ac3e-df1d8c6df466" absoluteBounds="11.39, 12.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb61f2ba-802e-463c-9c52-53a9423d424e" absoluteBounds="16.875, 23.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbgauDataContext/question" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba60842a-1acd-4234-8b1d-d264e40310a4" absoluteBounds="16.89, 23.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99270fd8-1773-4be2-9e4b-c85a228b2360" absoluteBounds="11.375, 8.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbgauDataContext/quota" />
+      <nestedChildShapes>
+        <elementListCompartment Id="939127e1-99c3-44bd-9563-f8a6efa48b89" absoluteBounds="11.39, 9.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="14bfc03d-4b53-4771-9096-a57bc48fdf3b" absoluteBounds="16.875, 16.5, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/dbgauDataContext/upload" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13ed6572-2310-49fd-ae94-f811d72deb82" absoluteBounds="16.89, 16.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="75ae59cb-a7c9-41bd-a1a8-3dfceae7953a" absoluteBounds="14.125, 20.375, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/dbgauDataContext/user" />
+      <nestedChildShapes>
+        <elementListCompartment Id="140e34d8-261f-49e5-adff-cced803e8c9f" absoluteBounds="14.14, 20.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(18.875 : 23.4479484049479); (19.625 : 23.4479484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbgauDataContext/question/question_answer" />
+      <nodes>
+        <classShapeMoniker Id="cb61f2ba-802e-463c-9c52-53a9423d424e" />
+        <classShapeMoniker Id="d8709807-8f66-4c3a-a17a-e45463a096c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.125 : 22.7300032552083); (19.625 : 22.7300032552083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbgauDataContext/user/user_answer" />
+      <nodes>
+        <classShapeMoniker Id="75ae59cb-a7c9-41bd-a1a8-3dfceae7953a" />
+        <classShapeMoniker Id="d8709807-8f66-4c3a-a17a-e45463a096c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.60351390625 : 20.375); (15.60351390625 : 16.21875); (19.875 : 16.21875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbgauDataContext/user/user_assignment" />
+      <nodes>
+        <classShapeMoniker Id="75ae59cb-a7c9-41bd-a1a8-3dfceae7953a" />
+        <classShapeMoniker Id="123735cb-ec38-4721-a161-872cc6116820" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.125 : 22.9151025390625); (15.125 : 24.2027498372396); (16.875 : 24.2027498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbgauDataContext/user/user_question" />
+      <nodes>
+        <classShapeMoniker Id="75ae59cb-a7c9-41bd-a1a8-3dfceae7953a" />
+        <classShapeMoniker Id="cb61f2ba-802e-463c-9c52-53a9423d424e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.375 : 13.0112939453125); (12.375 : 21.6450512695313); (14.125 : 21.6450512695313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbgauDataContext/department/department_user" />
+      <nodes>
+        <classShapeMoniker Id="5534f75c-0cc0-41a5-9faf-bfc738e266ed" />
+        <classShapeMoniker Id="75ae59cb-a7c9-41bd-a1a8-3dfceae7953a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0ff5a273-6335-4dde-b2b9-ca95ce2c163b" absoluteBounds="16.75, 19.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/dbgauDataContext/video" />
+      <nestedChildShapes>
+        <elementListCompartment Id="280e3c4a-1c29-467c-ad58-4a7ab01df5c3" absoluteBounds="16.765, 20.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5599a80-c419-4987-8faf-e9c8454d6c04" absoluteBounds="17.375, 10.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dbgauDataContext/courselecturer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b2350d7-a147-4761-9681-a5949180897f" absoluteBounds="17.39, 10.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d307bdb3-1ced-4cd1-ace3-51b874123d52" absoluteBounds="15.375, 8.875, 2, 2.5401025390625">
+      <DataClassMoniker Name="/dbgauDataContext/lecturer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a5f44f87-3b71-42e6-a335-700edd4b596e" absoluteBounds="15.39, 9.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.375 : 9.6249995); (18.40625 : 9.6249995); (18.40625 : 10.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbgauDataContext/lecturer/lecturer_courselecturer" />
+      <nodes>
+        <classShapeMoniker Id="d307bdb3-1ced-4cd1-ace3-51b874123d52" />
+        <classShapeMoniker Id="c5599a80-c419-4987-8faf-e9c8454d6c04" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.375 : 11.625); (12.375 : 10.4535953776042); (13.625 : 10.4535953776042); (13.625 : 9.9062505); (15.375 : 9.9062505)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbgauDataContext/department/department_lecturer" />
+      <nodes>
+        <classShapeMoniker Id="5534f75c-0cc0-41a5-9faf-bfc738e266ed" />
+        <classShapeMoniker Id="d307bdb3-1ced-4cd1-ace3-51b874123d52" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.375 : 9.39062525); (15.375 : 9.39062525)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbgauDataContext/quota/quota_lecturer" />
+      <nodes>
+        <classShapeMoniker Id="99270fd8-1773-4be2-9e4b-c85a228b2360" />
+        <classShapeMoniker Id="d307bdb3-1ced-4cd1-ace3-51b874123d52" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ecf0119b-94dc-4b19-a013-66c83edb2833" absoluteBounds="20.875, 10.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbgauDataContext/homework" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9138dec-01f0-4e50-a334-60f8d461e89e" absoluteBounds="20.89, 10.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="85d4c01b-ae2d-43e7-847b-d9aa30c03bc2" absoluteBounds="13.875, 11, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbgauDataContext/course" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15b62a4a-2577-47d2-b0cb-72b83cf78211" absoluteBounds="13.89, 11.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.52538890625 : 13.1554996744792); (14.52538890625 : 16.0781225); (14.7203750260417 : 16.0781225 : JumpStart); (14.8870416927083 : 16.0781225 : JumpEnd); (14.9986944791667 : 16.0781225 : JumpStart); (15.1653611458333 : 16.0781225 : JumpEnd); (19.875 : 16.0781225)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbgauDataContext/course/course_assignment" />
+      <nodes>
+        <classShapeMoniker Id="85d4c01b-ae2d-43e7-847b-d9aa30c03bc2" />
+        <classShapeMoniker Id="123735cb-ec38-4721-a161-872cc6116820" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.0820278125 : 13.1554996744792); (15.0820278125 : 17.6739005533854); (15.5201805729167 : 17.6739005533854 : JumpStart); (15.6868472395833 : 17.6739005533854 : JumpEnd); (16.875 : 17.6739005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbgauDataContext/course/course_upload" />
+      <nodes>
+        <classShapeMoniker Id="85d4c01b-ae2d-43e7-847b-d9aa30c03bc2" />
+        <classShapeMoniker Id="14bfc03d-4b53-4771-9096-a57bc48fdf3b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.96875 : 13.1554996744792); (13.96875 : 20.03125); (14.7203750260417 : 20.03125 : JumpStart); (14.8870416927083 : 20.03125 : JumpEnd); (15.5201805729167 : 20.03125 : JumpStart); (15.6868472395833 : 20.03125 : JumpEnd); (16.75 : 20.03125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbgauDataContext/course/course_video" />
+      <nodes>
+        <classShapeMoniker Id="85d4c01b-ae2d-43e7-847b-d9aa30c03bc2" />
+        <classShapeMoniker Id="0ff5a273-6335-4dde-b2b9-ca95ce2c163b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.875 : 11.6194482421875); (17.375 : 11.6194482421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbgauDataContext/course/course_courselecturer" />
+      <nodes>
+        <classShapeMoniker Id="85d4c01b-ae2d-43e7-847b-d9aa30c03bc2" />
+        <classShapeMoniker Id="c5599a80-c419-4987-8faf-e9c8454d6c04" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.875 : 12.1771468098958); (20.875 : 12.1771468098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbgauDataContext/course/course_homework" />
+      <nodes>
+        <classShapeMoniker Id="85d4c01b-ae2d-43e7-847b-d9aa30c03bc2" />
+        <classShapeMoniker Id="ecf0119b-94dc-4b19-a013-66c83edb2833" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.375 : 12.3181469726562); (13.875 : 12.3181469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbgauDataContext/department/department_course" />
+      <nodes>
+        <classShapeMoniker Id="5534f75c-0cc0-41a5-9faf-bfc738e266ed" />
+        <classShapeMoniker Id="85d4c01b-ae2d-43e7-847b-d9aa30c03bc2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="99660c8a-07de-4f35-a4b2-829039bd2f64" absoluteBounds="17, 14.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dbgauDataContext/enroll" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1847c6df-744e-4dd5-9745-70d8cc1492fd" absoluteBounds="17.015, 14.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(15.50976640625 : 13.1554996744792); (15.50976640625 : 15.0681469726562); (17 : 15.0681469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbgauDataContext/course/course_enroll" />
+      <nodes>
+        <classShapeMoniker Id="85d4c01b-ae2d-43e7-847b-d9aa30c03bc2" />
+        <classShapeMoniker Id="99660c8a-07de-4f35-a4b2-829039bd2f64" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.803708359375 : 20.375); (14.803708359375 : 15.4459729589844); (14.9986944791667 : 15.4459729589844 : JumpStart); (15.1653611458333 : 15.4459729589844 : JumpEnd); (17 : 15.4459729589844)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbgauDataContext/user/user_enroll" />
+      <nodes>
+        <classShapeMoniker Id="75ae59cb-a7c9-41bd-a1a8-3dfceae7953a" />
+        <classShapeMoniker Id="99660c8a-07de-4f35-a4b2-829039bd2f64" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
